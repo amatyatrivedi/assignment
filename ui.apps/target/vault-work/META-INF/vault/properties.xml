@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>amatyaAssignment - UI apps</comment>
+<entry key="createdBy">amatya.trivedi</entry>
+<entry key="name">amatyaAssignment.ui.apps</entry>
+<entry key="created">2018-06-22T15:37:57.095+0530</entry>
+<entry key="groupId">org.amatya</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">amatyaAssignment Content Package</entry>
+<entry key="description">UI apps package for amatyaAssignment</entry>
+<entry key="artifactId">amatyaAssignment.ui.apps</entry>
+<entry key="path">/etc/packages/amatyaAssignment Content Package/amatyaAssignment.ui.apps.zip</entry>
+</properties>

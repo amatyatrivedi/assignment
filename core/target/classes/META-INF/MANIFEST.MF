@@ -1,0 +1,61 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1529662075509
+Build-Jdk: 1.8.0
+Built-By: amatya.trivedi
+Bundle-Description: Core bundle for amatyaAssignment
+Bundle-ManifestVersion: 2
+Bundle-Name: amatyaAssignment - Core
+Bundle-SymbolicName: org.amatya.Assignment.core
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: assignment;version="0.0.1";uses:="com.adobe.granite.work
+ flow,com.adobe.granite.workflow.exec,com.adobe.granite.workflow.metadat
+ a,com.day.cq.mailer,com.day.cq.search,javax.annotation,org.apache.sling
+ .api,org.apache.sling.api.resource,org.apache.sling.api.servlets,org.ap
+ ache.sling.jcr.api,org.apache.sling.models.annotations,org.slf4j",org.a
+ matya.core.filters;version="0.0.1";uses:="javax.servlet",org.amatya.cor
+ e.listeners;version="0.0.1";uses:="org.osgi.service.event",org.amatya.c
+ ore.models;version="0.0.1";uses:="javax.annotation,javax.inject,org.apa
+ che.sling.api.resource,org.apache.sling.models.annotations",org.amatya.
+ core;version="1.0",org.amatya.core.schedulers;version="0.0.1",org.amaty
+ a.core.servlets;version="0.0.1";uses:="javax.servlet,org.apache.sling.a
+ pi,org.apache.sling.api.servlets"
+Import-Package: javax.inject;version="0.0.0",com.adobe.granite.workflow;
+ version="[1.0,2)",com.adobe.granite.workflow.exec;version="[1.0,2)",com
+ .adobe.granite.workflow.metadata;version="[1.0,2)",com.day.cq.mailer;ve
+ rsion="[5.8,6)",com.day.cq.search;version="[1.1,2)",com.day.cq.search.r
+ esult;version="[1.1,2)",javax.annotation,javax.jcr;version="[2.0,3)",ja
+ vax.servlet,org.apache.commons.mail,org.apache.sling.api;version="[2.3,
+ 3)",org.apache.sling.api.request;version="[2.4,3)",org.apache.sling.api
+ .resource;version="[2.5,3)",org.apache.sling.api.servlets;version="[2.1
+ ,3)",org.apache.sling.commons.json;version="[2.0,3)",org.apache.sling.c
+ ommons.osgi;version="[2.2,3)",org.apache.sling.jcr.api;version="[2.2,3)
+ ",org.apache.sling.models.annotations;version="[1.0,2)",org.apache.slin
+ g.settings;version="[1.3,2)",org.osgi.service.event;version="[1.2,2)",o
+ rg.slf4j;version="[1.5,2)"
+Provide-Capability: osgi.service;effective:=active;objectClass="javax.se
+ rvlet.Servlet";service.vendor=Adobe,osgi.service;effective:=active;obje
+ ctClass="com.adobe.granite.workflow.exec.WorkflowProcess";service.descr
+ iption="Amatya Assignment Workflow";service.vendor=Adobe;process.label=
+ "Amatya Assignment Workflow",osgi.service;effective:=active;objectClass
+ ="java.lang.Runnable";scheduler.expression="*/30 * * * * ?";scheduler.c
+ oncurrent=false;service.vendor=Adobe,osgi.service;effective:=active;obj
+ ectClass="javax.servlet.Filter";service.ranking=-700;sling.filter.scope
+ =REQUEST;service.vendor=Adobe,osgi.service;effective:=active;objectClas
+ s="org.osgi.service.event.EventHandler";event.topics="org/apache/sling/
+ api/resource/Resource/*";service.vendor=Adobe,osgi.service;effective:=a
+ ctive;objectClass="assignment.CustomerService";service.vendor=Adobe
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.apache.sling.jcr.api.SlingRepository)",osgi.service;effective:=act
+ ive;filter:="(objectClass=com.day.cq.search.QueryBuilder)",osgi.service
+ ;effective:=active;filter:="(objectClass=org.apache.sling.api.resource.
+ ResourceResolverFactory)",osgi.service;effective:=active;filter:="(obje
+ ctClass=com.day.cq.mailer.MessageGatewayService)",osgi.ee;filter:="(&(o
+ sgi.ee=JavaSE)(version=1.6))"
+Service-Component: OSGI-INF/org.amatya.core.servlets.SimpleServlet.xml,O
+ SGI-INF/assignment.WorkFlow.xml,OSGI-INF/org.amatya.core.schedulers.Sim
+ pleScheduledTask.xml,OSGI-INF/assignment.HandleClaim.xml,OSGI-INF/org.a
+ matya.core.filters.LoggingFilter.xml,OSGI-INF/assignment.CustomerServic
+ eImpl.xml,OSGI-INF/org.amatya.core.listeners.SimpleResourceListener.xml
+Sling-Model-Packages: org.amatya.core,assignment
+Tool: Bnd-2.3.0.201405100607

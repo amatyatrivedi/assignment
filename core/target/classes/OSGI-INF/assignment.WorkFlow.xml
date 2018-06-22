@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="assignment.WorkFlow">
+        <implementation class="assignment.WorkFlow"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.granite.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="service.description" value="Amatya Assignment Workflow"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="process.label" value="Amatya Assignment Workflow"/>
+        <property name="service.pid" value="assignment.WorkFlow"/>
+        <reference name="messageGatewayService" interface="com.day.cq.mailer.MessageGatewayService" cardinality="1..1" policy="static" bind="bindMessageGatewayService" unbind="unbindMessageGatewayService"/>
+    </scr:component>
+</components>
